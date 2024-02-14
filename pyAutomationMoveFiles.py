@@ -28,15 +28,17 @@ def main():
     py_regex_count = get_file_count(source_directory, "pyRegex")
     py_file_count = get_file_count(source_directory, "pyFile")
     py_excel_count = get_file_count(source_directory, "pyExcel")
+    py_pdf_count = get_file_count(source_directory, "pyPDF")
 
     print(f"Found {py_regex_count} pyRegex files\n")
     print(f"Found {py_file_count} pyFile files\n")
     print(f"Found {py_excel_count} pyFile files\n")
+    print(f"Found {py_pdf_count} pyFile files\n")
 
     move_files(source_directory, source_directory / "pyRegex", "pyRegex")
     move_files(source_directory, source_directory / "pyFile", "pyFile")
     move_files(source_directory, source_directory / "pyExcel", "pyExcel")
-
+    move_files(source_directory, source_directory / "pyPDF", "pyPDF")
 
 
 if __name__ == "__main__":
